@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Order Calculator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Product Order Calculator</h1>
+
+  <table>
+    <tr>
+      <th>Product</th>
+      <th>Quantity</th>
+      <th>Gift Wrap</th>
+    </tr>
+    <tr>
+      <td>Product A</td>
+      <td><input type="number" id="quantity1" min="0"></td>
+      <td><input type="checkbox" id="giftWrap1"></td>
+    </tr>
+    <tr>
+      <td>Product B</td>
+      <td><input type="number" id="quantity2" min="0"></td>
+      <td><input type="checkbox" id="giftWrap2"></td>
+    </tr>
+    <tr>
+      <td>Product C</td>
+      <td><input type="number" id="quantity3" min="0"></td>
+      <td><input type="checkbox" id="giftWrap3"></td>
+    </tr>
+  </table>
+
+  <button onclick="calculateTotal()">Calculate</button>
+
+  <div class="container">
+    <h2 id="output1" style="display: none;">Order Summary</h2>
+    
+    <table id="output" style="display: none;">
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Discount</th>
+        <th>Total</th>
+      </tr>
+      <tr>
+        <td id="productOutput1"></td>
+        <td id="quantityOutput1"></td>
+        <td id="discount1"></td>
+        <td id="total1"></td>
+      </tr>
+      <tr>
+        <td id="productOutput2"></td>
+        <td id="quantityOutput2"></td>
+        <td id="discount2"></td>
+        <td id="total2"></td>
+      </tr>
+      <tr>
+        <td id="productOutput3"></td>
+        <td id="quantityOutput3"></td>
+        <td id="discount3"></td>
+        <td id="total3"></td>
+      </tr>
+      <tr>
+        <td colspan="3">Subtotal:</td>
+        <td id="subtotal"></td>
+      </tr>
+      <tr>
+        <td colspan="3" id="discountApplied"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="3">Shipping Fee:</td>
+        <td id="shippingFee"></td>
+      </tr>
+      <tr>
+        <td colspan="3">Gift Wrap Fee:</td>
+        <td id="giftWrapTotal"></td>
+      </tr>
+      <tr>
+        <td colspan="3">Grand Total:</td>
+        <td id="grandTotal"></td>
+      </tr>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
